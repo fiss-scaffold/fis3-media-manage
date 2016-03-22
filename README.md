@@ -32,7 +32,7 @@ fis.addMediaRule('css_need_sprite',
 )
 ```
 
-##添加一个media
+##添加一个media fis.addMedia
 >fis-conf.js添加一个media
 >media名称：test
 >该media包含规则：css_need_sprite和pack_js_css_in_one
@@ -44,7 +44,7 @@ fis.addMedia('test',[
 ]);
 ```
 
-## media继承
+## media继承 fis.extendMedia
 >fis-conf.js添加一个新的media，新的media是在其他已有的media基础上基础而来
 >新media名称：pre-qa
 >继承的media名称：test
