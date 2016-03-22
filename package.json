@@ -1,0 +1,22 @@
+{
+  "name": "fis3-media-manage",
+  "version": "0.0.1",
+  "description": "fis3 media manage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis3",
+    "fis3-media",
+	"fis3-media-manage"
+  ],
+  "author": {
+    "name": "winnieBear"
+  },
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiss-scaffold/fis3-media-manage"
+  }
+}
