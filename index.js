@@ -41,13 +41,22 @@ function fisMediaManage(fis) {
         return _fis;
     }
 
-    fis.extendMedia = fis.extendMedia || function(mediaBase, media, arrMoreRule) {
+    fis.extendMedia = fis.extendMedia || function(mediaBase, media, arrMoreRule, arrRemoveRule) {
         if (!mediaMap[mediaBase]) {
             fis.log.error('fis.extendMedia fail,mediaBase[%s] is not existed!', mediaBase);
             process.exit(-1);
         }
         var mediaBaseRule = mediaMap[mediaBase];
-        var arrRule = [].concat(mediaBaseRule, arrMoreRule);
+        var arrRule = [].concat(mediaBaseRule, []);
+        //remove rule
+        arrRemoveRule = arrRemoveRule || [];
+        if (arrRemoveRule.length) {
+            arrRule = arrRule.filter(function(rule) {
+                return arrRemoveRule.indexOf(rule) === -1;
+            });
+        }
+
+        arrRule = [].concat(arrRule, arrMoreRule);
 
         return fis.addMedia(media, arrRule);
     }
